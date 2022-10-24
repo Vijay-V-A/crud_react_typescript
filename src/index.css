@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.Toastify__close-button.Toastify__close-button--light svg {
+  color: #9ca3af !important;
+}
+
+.Toastify__toast.Toastify__toast-theme--light.Toastify__toast--default {
+  background-color: #bbf7d0;
+  font-family: sans-serif;
+}
+
+.Toastify__toast-body {
+  color: #4b5563;
+  font-size: 18px;
+}
