@@ -14,6 +14,7 @@ const Home: FC = () => {
   const dispatch = useAppDispatch();
   const Loading = useAppSelector((state) => state.Posts.loading);
   const open = useAppSelector((state) => state.Posts.Modal);
+  const OnePost = useAppSelector((state) => state.Posts.OnePost);
 
   useEffect(() => {
     dispatch(GetPost());
@@ -23,7 +24,7 @@ const Home: FC = () => {
     <div className="mb-10" data-testid="Main-Sub">
       <Headers />
       {!Loading ? <Table /> : <Loader />}
-      <AddPost ModalShow={open} />
+      <AddPost ModalShow={open} OnePost={OnePost} />
       <ToastContainer autoClose={2000} />
     </div>
   );

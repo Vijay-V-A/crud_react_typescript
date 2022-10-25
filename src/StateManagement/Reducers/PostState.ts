@@ -36,7 +36,7 @@ export const PostSlice = createSlice({
       state.loading = false;
     },
     GetOnePost: (state, action: PayloadAction<any>) => {
-      return state;
+      state.OnePost = null;
     },
     SetOnePost: (state, action: PayloadAction<any>) => {
       state.OnePost = action.payload;

@@ -7,12 +7,20 @@ import {
   useEffect,
 } from "react";
 import { Dialog, Transition } from "@headlessui/react";
-import { useAppDispatch, useAppSelector } from "../StateManagement/ReduxHook";
+import { useAppDispatch } from "../StateManagement/ReduxHook";
 import { AddPost, UpdatePost } from "../StateManagement/Reducers/PostState";
 import { ModalShow } from "../StateManagement/Reducers/PostState";
+import Loader from "./Loader";
+interface OnePosts {
+  id: number;
+  userId: number;
+  title: string;
+  body: string;
+}
 
 interface PostProps {
   ModalShow: boolean;
+  OnePost: OnePosts | null;
 }
 
 const AddPosts: FC<PostProps> = (props): JSX.Element => {
@@ -27,8 +35,6 @@ const AddPosts: FC<PostProps> = (props): JSX.Element => {
     body: "",
   });
   const [ButtonDisabled, setButtonDisabled] = useState<boolean>(false);
-
-  const OnePost = useAppSelector((state) => state.Posts.OnePost);
 
   const HandleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setPost({ ...Post, [e.target.name]: e.target.value });
@@ -52,12 +58,12 @@ const AddPosts: FC<PostProps> = (props): JSX.Element => {
   };
 
   useEffect(() => {
-    if (OnePost !== null)
+    if (props.OnePost !== null)
       setPost({
         ...Post,
-        id: Number(OnePost.id),
-        title: OnePost.title,
-        body: OnePost.body,
+        id: Number(props.OnePost.id),
+        title: props.OnePost.title,
+        body: props.OnePost.body,
       });
     else
       setPost({
@@ -65,7 +71,14 @@ const AddPosts: FC<PostProps> = (props): JSX.Element => {
         title: "",
         body: "",
       });
-  }, [OnePost]);
+    return () => {
+      setPost({
+        id: 0,
+        title: "",
+        body: "",
+      });
+    };
+  }, [props.OnePost]);
 
   return (
     <Transition.Root show={props.ModalShow} as={Fragment}>
@@ -98,74 +111,78 @@ const AddPosts: FC<PostProps> = (props): JSX.Element => {
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
               <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
-                <form
-                  className="w-full max-w-lg"
-                  onSubmit={(e) => HandleSubmit(e)}
-                >
-                  <div className="bg-gray-50 px-4 py-3 sm:flex  sm:px-6">
-                    <p className="whitespace-nowrap text-base font-medium text-2xl text-gray-500 hover:text-gray-900">
-                      {Post.id === 0 ? " Add Post" : "Update Post"}
-                    </p>
-                  </div>
-                  <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-                    <div className="flex flex-wrap -mx-3 mb-6">
-                      <div className="w-full px-3">
-                        <label className="block tracking-wide text-gray-500 text-lg font-bold mb-2">
-                          Title
-                        </label>
-                        <input
-                          className="appearance-none block w-full  text-gray-500 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                          id="grid-password"
-                          value={Post.title}
-                          name="title"
-                          role="in_1"
-                          required
-                          onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                            HandleChange(e)
-                          }
-                        />
+                {props.OnePost !== null ? (
+                  <form
+                    className="w-full max-w-lg"
+                    onSubmit={(e) => HandleSubmit(e)}
+                  >
+                    <div className="bg-gray-50 px-4 py-3 sm:flex  sm:px-6">
+                      <p className="whitespace-nowrap text-base font-medium text-2xl text-gray-500 hover:text-gray-900">
+                        {Post.id === 0 ? " Add Post" : "Update Post"}
+                      </p>
+                    </div>
+                    <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                      <div className="flex flex-wrap -mx-3 mb-6">
+                        <div className="w-full px-3">
+                          <label className="block tracking-wide text-gray-500 text-lg font-bold mb-2">
+                            Title
+                          </label>
+                          <input
+                            className="appearance-none block w-full  text-gray-500 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                            id="grid-password"
+                            value={Post.title}
+                            name="title"
+                            role="in_1"
+                            required
+                            onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                              HandleChange(e)
+                            }
+                          />
+                        </div>
+                      </div>
+                      <div className="flex flex-wrap -mx-3 mb-6">
+                        <div className="w-full px-3">
+                          <label className="block  tracking-wide text-gray-500 text-lg font-bold mb-2">
+                            Body
+                          </label>
+                          <input
+                            className="appearance-none block w-full  text-gray-500 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                            id="grid-password"
+                            value={Post.body}
+                            name="body"
+                            required
+                            role="in_2"
+                            onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                              HandleChange(e)
+                            }
+                          />
+                        </div>
                       </div>
                     </div>
-                    <div className="flex flex-wrap -mx-3 mb-6">
-                      <div className="w-full px-3">
-                        <label className="block  tracking-wide text-gray-500 text-lg font-bold mb-2">
-                          Body
-                        </label>
-                        <input
-                          className="appearance-none block w-full  text-gray-500 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                          id="grid-password"
-                          value={Post.body}
-                          name="body"
-                          required
-                          role="in_2"
-                          onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                            HandleChange(e)
-                          }
-                        />
-                      </div>
+                    <div className="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+                      <button
+                        type="submit"
+                        className={
+                          ButtonDisabled
+                            ? "cursor-not-allowed	inline-flex w-full justify-center rounded-md border border-transparent bg-green-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-gren-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
+                            : "inline-flex w-full justify-center rounded-md border border-transparent bg-green-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-gren-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
+                        }
+                        disabled={ButtonDisabled}
+                      >
+                        {Post.id === 0 ? "Submit" : "Update"}
+                      </button>
+                      <button
+                        type="button"
+                        className="mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
+                        onClick={() => dispatch(ModalShow())}
+                      >
+                        Cancel
+                      </button>
                     </div>
-                  </div>
-                  <div className="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
-                    <button
-                      type="submit"
-                      className={
-                        ButtonDisabled
-                          ? "cursor-not-allowed	inline-flex w-full justify-center rounded-md border border-transparent bg-green-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-gren-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
-                          : "inline-flex w-full justify-center rounded-md border border-transparent bg-green-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-gren-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
-                      }
-                      disabled={ButtonDisabled}
-                    >
-                      {Post.id === 0 ? "Submit" : "Update"}
-                    </button>
-                    <button
-                      type="button"
-                      className="mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
-                      onClick={() => dispatch(ModalShow())}
-                    >
-                      Cancel
-                    </button>
-                  </div>
-                </form>
+                  </form>
+                ) : (
+                  <Loader />
+                )}
               </Dialog.Panel>
             </Transition.Child>
           </div>
