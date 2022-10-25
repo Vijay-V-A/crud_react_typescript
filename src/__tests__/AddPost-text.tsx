@@ -5,12 +5,23 @@ import user from "@testing-library/user-event";
 import AppProviders from "../AppProviders";
 import AddPost from "../Components/AddPost";
 
+// const onedata = { id: 2, userId: 1, title: "Add post", body: "added" };
+
 describe("Header", () => {
-  test("renders all element correcly", () => {
-    render(<AddPost ModalShow={true} />, {
+  test("renders all element correcly", async () => {
+    const onedata = { id: 0, userId: 1, title: "", body: "" };
+
+    render(<AddPost ModalShow={true} OnePost={onedata} />, {
       wrapper: AppProviders,
     });
-    const textElemt = screen.getByText(/Add Post/i);
+    const textElemt = await screen.findByRole(
+      "heading",
+      { name: /add post/i },
+      {
+        timeout: 5000,
+      }
+    );
+
     expect(textElemt).toBeInTheDocument();
 
     const InputElemtLablel = screen.getByText(/title/i);

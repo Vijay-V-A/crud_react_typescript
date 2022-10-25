@@ -19,7 +19,7 @@ const Home: FC = () => {
   useEffect(() => {
     dispatch(GetPost());
   }, [dispatch]);
-
+  console.log(OnePost);
   return (
     <div className="mb-10" data-testid="Main-Sub">
       <Headers />

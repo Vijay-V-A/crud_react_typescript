@@ -117,9 +117,9 @@ const AddPosts: FC<PostProps> = (props): JSX.Element => {
                     onSubmit={(e) => HandleSubmit(e)}
                   >
                     <div className="bg-gray-50 px-4 py-3 sm:flex  sm:px-6">
-                      <p className="whitespace-nowrap text-base font-medium text-2xl text-gray-500 hover:text-gray-900">
+                      <h3 className="whitespace-nowrap text-base font-medium text-2xl text-gray-500 hover:text-gray-900">
                         {Post.id === 0 ? " Add Post" : "Update Post"}
-                      </p>
+                      </h3>
                     </div>
                     <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                       <div className="flex flex-wrap -mx-3 mb-6">
