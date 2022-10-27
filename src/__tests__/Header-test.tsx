@@ -28,7 +28,7 @@ describe("Header User Interaction", () => {
   });
 
   test("Button Click", async () => {
-    user.setup();
+    // user.setup();
     render(<Header />, {
       wrapper: AppProviders,
     });
@@ -40,7 +40,7 @@ describe("Header User Interaction", () => {
   });
 
   test("Button Double Click", async () => {
-    user.setup();
+    // user.setup();
     render(<Header />, {
       wrapper: AppProviders,
     });
