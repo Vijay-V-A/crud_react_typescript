@@ -5,8 +5,6 @@ import user from "@testing-library/user-event";
 import AppProviders from "../AppProviders";
 import AddPost from "../Components/AddPost";
 
-// const onedata = { id: 2, userId: 1, title: "Add post", body: "added" };
-
 describe("Header", () => {
   test("renders all element correcly", async () => {
     const onedata = { id: 0, userId: 1, title: "", body: "" };
