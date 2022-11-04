@@ -40,11 +40,6 @@ const AddPosts: FC<PostProps> = (props): JSX.Element => {
     defaultValues: { id: 0, title: "", body: "" },
   });
 
-  console.log(props.OnePost);
-  console.log(watch("id"));
-  console.log(watch("title"));
-  console.log(watch("body"));
-
   const onSubmit = (data: IFormInput) => {
     setButtonDisabled((PrevState) => !PrevState);
     setTimeout(() => {
