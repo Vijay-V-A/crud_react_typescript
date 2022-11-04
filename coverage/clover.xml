@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1667539354525" clover="3.2.0">
+  <project timestamp="1667539354525" name="All files">
+    <metrics statements="132" coveredstatements="109" conditionals="42" coveredconditionals="26" methods="60" coveredmethods="48" elements="234" coveredelements="183" complexity="0" loc="132" ncloc="132" packages="6" files="15" classes="15"/>
+    <package name="src">
+      <metrics statements="6" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+      <file name="App.tsx" path="D:\Examples\TS\crud_react_typescript\src\App.tsx">
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+      </file>
+      <file name="AppProviders.tsx" path="D:\Examples\TS\crud_react_typescript\src\AppProviders.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="6" count="12" type="stmt"/>
+      </file>
+      <file name="index.tsx" path="D:\Examples\TS\crud_react_typescript\src\index.tsx">
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Components">
+      <metrics statements="63" coveredstatements="53" conditionals="32" coveredconditionals="20" methods="27" coveredmethods="20"/>
+      <file name="AddPost.tsx" path="D:\Examples\TS\crud_react_typescript\src\Components\AddPost.tsx">
+        <metrics statements="27" coveredstatements="18" conditionals="16" coveredconditionals="9" methods="8" coveredmethods="2"/>
+        <line num="27" count="2" type="stmt"/>
+        <line num="28" count="7" type="stmt"/>
+        <line num="30" count="6" type="stmt"/>
+        <line num="39" count="6" type="stmt"/>
+        <line num="43" count="6" type="stmt"/>
+        <line num="44" count="6" type="stmt"/>
+        <line num="45" count="6" type="stmt"/>
+        <line num="46" count="6" type="stmt"/>
+        <line num="48" count="6" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="53" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="56" count="0" type="stmt"/>
+        <line num="59" count="6" type="stmt"/>
+        <line num="60" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="61" count="2" type="stmt"/>
+        <line num="62" count="2" type="stmt"/>
+        <line num="63" count="2" type="stmt"/>
+        <line num="65" count="1" type="stmt"/>
+        <line num="66" count="1" type="stmt"/>
+        <line num="67" count="1" type="stmt"/>
+        <line num="71" count="6" type="stmt"/>
+        <line num="76" count="0" type="stmt"/>
+        <line num="172" count="0" type="stmt"/>
+        <line num="173" count="0" type="stmt"/>
+      </file>
+      <file name="Header.tsx" path="D:\Examples\TS\crud_react_typescript\src\Components\Header.tsx">
+        <metrics statements="13" coveredstatements="12" conditionals="8" coveredconditionals="4" methods="6" coveredmethods="5"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="6" type="stmt"/>
+        <line num="8" count="6" type="stmt"/>
+        <line num="10" count="9" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="16" count="6" type="stmt"/>
+        <line num="17" count="4" type="stmt"/>
+        <line num="19" count="4" type="stmt"/>
+        <line num="20" count="4" type="stmt"/>
+        <line num="24" count="6" type="stmt"/>
+        <line num="53" count="1" type="stmt"/>
+        <line num="54" count="1" type="stmt"/>
+      </file>
+      <file name="Home.tsx" path="D:\Examples\TS\crud_react_typescript\src\Components\Home.tsx">
+        <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="6" coveredmethods="6"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+      </file>
+      <file name="Loader.tsx" path="D:\Examples\TS\crud_react_typescript\src\Components\Loader.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+      </file>
+      <file name="PostsTable.tsx" path="D:\Examples\TS\crud_react_typescript\src\Components\PostsTable.tsx">
+        <metrics statements="12" coveredstatements="12" conditionals="6" coveredconditionals="5" methods="6" coveredmethods="6"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="15" count="7" type="stmt"/>
+        <line num="17" count="7" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="22" count="7" type="stmt"/>
+        <line num="23" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="27" count="7" type="stmt"/>
+        <line num="66" count="31" type="stmt"/>
+        <line num="79" count="1" type="stmt"/>
+        <line num="85" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Middleware">
+      <metrics statements="15" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="6"/>
+      <file name="api.ts" path="D:\Examples\TS\crud_react_typescript\src\Middleware\api.ts">
+        <metrics statements="14" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="5"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="6" count="6" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="11" count="6" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="24" count="6" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="38" count="6" type="stmt"/>
+        <line num="39" count="2" type="stmt"/>
+      </file>
+      <file name="index.ts" path="D:\Examples\TS\crud_react_typescript\src\Middleware\index.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="12" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Middleware.AddPost">
+      <metrics statements="25" coveredstatements="20" conditionals="4" coveredconditionals="0" methods="10" coveredmethods="10"/>
+      <file name="AddPostSagaWatcher.ts" path="D:\Examples\TS\crud_react_typescript\src\Middleware\AddPost\AddPostSagaWatcher.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
+        <line num="18" count="5" type="stmt"/>
+        <line num="22" count="5" type="stmt"/>
+        <line num="26" count="5" type="stmt"/>
+        <line num="30" count="5" type="stmt"/>
+        <line num="34" count="5" type="stmt"/>
+      </file>
+      <file name="AddPostSagaWorker.ts" path="D:\Examples\TS\crud_react_typescript\src\Middleware\AddPost\AddPostSagaWorker.ts">
+        <metrics statements="20" coveredstatements="15" conditionals="4" coveredconditionals="0" methods="5" coveredmethods="5"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="36" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="45" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="47" count="1" type="stmt"/>
+        <line num="52" count="2" type="stmt"/>
+        <line num="53" count="2" type="stmt"/>
+        <line num="54" count="1" type="stmt"/>
+        <line num="56" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.StateManagement">
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="ReduxHook.ts" path="D:\Examples\TS\crud_react_typescript\src\StateManagement\ReduxHook.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+      </file>
+      <file name="store.ts" path="D:\Examples\TS\crud_react_typescript\src\StateManagement\store.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="13" count="5" type="stmt"/>
+        <line num="19" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.StateManagement.Reducers">
+      <metrics statements="17" coveredstatements="17" conditionals="6" coveredconditionals="6" methods="10" coveredmethods="10"/>
+      <file name="PostState.ts" path="D:\Examples\TS\crud_react_typescript\src\StateManagement\Reducers\PostState.ts">
+        <metrics statements="17" coveredstatements="17" conditionals="6" coveredconditionals="6" methods="10" coveredmethods="10"/>
+        <line num="19" count="6" type="stmt"/>
+        <line num="27" count="6" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="39" count="2" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
+        <line num="51" count="2" type="stmt"/>
+        <line num="54" count="2" type="stmt"/>
+        <line num="57" count="1" type="stmt"/>
+        <line num="60" count="3" type="stmt"/>
+        <line num="62" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="63" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="64" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="80" count="6" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

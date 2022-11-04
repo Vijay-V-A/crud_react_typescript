@@ -40,6 +40,11 @@ const AddPosts: FC<PostProps> = (props): JSX.Element => {
     defaultValues: { id: 0, title: "", body: "" },
   });
 
+  console.log(props.OnePost);
+  console.log(watch("id"));
+  console.log(watch("title"));
+  console.log(watch("body"));
+
   const onSubmit = (data: IFormInput) => {
     setButtonDisabled((PrevState) => !PrevState);
     setTimeout(() => {
@@ -113,8 +118,8 @@ const AddPosts: FC<PostProps> = (props): JSX.Element => {
                             </label>
                             <input
                               className="appearance-none block w-full  text-gray-500 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                              id="grid-password"
-                              role="in_1"
+                              role="title"
+                              value={watch("title")}
                               {...register("title", {
                                 required: true,
                               })}
@@ -133,8 +138,8 @@ const AddPosts: FC<PostProps> = (props): JSX.Element => {
                             </label>
                             <input
                               className="appearance-none block w-full  text-gray-500 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                              id="grid-password"
-                              role="in_2"
+                              role="body"
+                              value={watch("body")}
                               {...register("body", {
                                 required: true,
                               })}
@@ -150,6 +155,7 @@ const AddPosts: FC<PostProps> = (props): JSX.Element => {
                       <div className="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
                         <button
                           type="submit"
+                          data-testid="submit"
                           className={
                             ButtonDisabled
                               ? "cursor-not-allowed	inline-flex w-full justify-center rounded-md border border-transparent bg-green-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-gren-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"

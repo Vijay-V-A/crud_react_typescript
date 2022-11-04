@@ -1,14 +1,18 @@
 import { FC } from "react";
-import { useAppDispatch, useAppSelector } from "../StateManagement/ReduxHook";
+import { useAppDispatch } from "../StateManagement/ReduxHook";
 import {
   GetOnePost,
   ModalShow,
   DeletePost,
 } from "../StateManagement/Reducers/PostState";
+import { PostStateData } from "../StateManagement/Reducers/PostState";
 
-const Table: FC = () => {
+interface PostsProps {
+  Posts: PostStateData[] | null;
+}
+
+const Table: FC<PostsProps> = ({ Posts }) => {
   const dispatch = useAppDispatch();
-  const Posts = useAppSelector((state) => state.Posts.Posts);
 
   const HandleEdit = (row: any) => {
     dispatch(ModalShow());
@@ -56,33 +60,46 @@ const Table: FC = () => {
                 </tr>
               </thead>
               <tbody>
-                {Posts.map((row, index) => (
-                  <tr
-                    className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
-                    key={row.id}
-                  >
-                    <td className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                      {row.id}
-                    </td>
-                    <td className="py-4 px-6">{row.title}</td>
-                    <td className="py-4 px-6">{row.body}</td>
+                {Posts?.length !== 0 && Posts ? (
+                  <>
+                    {Posts.map((row, index) => (
+                      <tr
+                        className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+                        key={index + 1}
+                      >
+                        <td className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                          {row.id}
+                        </td>
+                        <td className="py-4 px-6">{row.title}</td>
+                        <td className="py-4 px-6">{row.body}</td>
 
-                    <td className="py-4 px-6 text-center">
-                      <button
-                        className="font-medium text-blue-600 dark:text-blue-500 hover:underline mr-5"
-                        onClick={() => HandleEdit(row)}
-                      >
-                        Edit
-                      </button>
-                      <button
-                        className="font-medium text-red-600 dark:text-blue-500 hover:underline"
-                        onClick={() => HandleDelete(row.id)}
-                      >
-                        Delete
-                      </button>
+                        <td className="py-4 px-6 text-center">
+                          <button
+                            className="font-medium text-blue-600 dark:text-blue-500 hover:underline mr-5"
+                            onClick={() => HandleEdit(row)}
+                          >
+                            Edit
+                          </button>
+                          <button
+                            className="font-medium text-red-600 dark:text-blue-500 hover:underline"
+                            onClick={() => HandleDelete(row.id)}
+                          >
+                            Delete
+                          </button>
+                        </td>
+                      </tr>
+                    ))}
+                  </>
+                ) : (
+                  <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                    <td
+                      colSpan={4}
+                      className="py-4 px-6 font-medium text-center text-gray-900 whitespace-nowrap dark:text-white"
+                    >
+                      No data Found...!
                     </td>
                   </tr>
-                ))}
+                )}
               </tbody>
             </table>
           </div>

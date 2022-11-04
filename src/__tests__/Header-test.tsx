@@ -1,5 +1,4 @@
-import { render, screen } from "@testing-library/react";
-import user from "@testing-library/user-event";
+import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import AppProviders from "../AppProviders";
 import Header from "../Components/Header";
@@ -27,27 +26,14 @@ describe("Header User Interaction", () => {
     expect(textElement).toHaveTextContent("false");
   });
 
-  test("Button Click", async () => {
-    // user.setup();
+  test("Button Click", () => {
     render(<Header />, {
       wrapper: AppProviders,
     });
 
     const buttonElement = screen.getByRole("button", { name: /add post/i });
-    await user.click(buttonElement);
+    fireEvent.click(buttonElement);
     const textElement = screen.getByRole("heading");
     expect(textElement).toHaveTextContent("true");
-  });
-
-  test("Button Double Click", async () => {
-    // user.setup();
-    render(<Header />, {
-      wrapper: AppProviders,
-    });
-
-    const buttonElement = screen.getByRole("button", { name: /add post/i });
-    const textElement = screen.getByRole("heading");
-    await user.dblClick(buttonElement);
-    expect(textElement).toHaveTextContent("false");
   });
 });
