@@ -34,13 +34,6 @@ describe("Add Post", () => {
   });
 });
 
-const mockedEntries = [
-  {
-    isIntersecting: true,
-    boundingClientRect: { x: 10, y: 20, width: 30, height: 40 },
-  },
-];
-
 const IntersectionObserverStub = function () {
   return {
     observe: jest.fn(),
@@ -60,14 +53,18 @@ describe("Form Submit ", () => {
       wrapper: AppProviders,
     });
 
-    const InputElemt = screen.getByRole("title");
-    fireEvent.change(InputElemt, { target: { value: "the title value" } });
+    await act(async () => {
+      const InputElemt = screen.getByRole("title");
+      fireEvent.change(InputElemt, { target: { value: "the title value" } });
 
-    const InputElemt_2 = screen.getByRole("body");
-    fireEvent.change(InputElemt_2, { target: { value: "the body value" } });
+      const InputElemt_2 = screen.getByRole("body");
+      fireEvent.change(InputElemt_2, { target: { value: "the body value" } });
+    });
 
-    const submitButton = screen.getByRole("button", { name: /submit/i });
-    fireEvent.click(submitButton);
+    await act(async () => {
+      const submitButton = screen.getByRole("button", { name: /submit/i });
+      fireEvent.click(submitButton);
+    });
   });
 });
 
@@ -79,14 +76,18 @@ describe("Form Submit ", () => {
       wrapper: AppProviders,
     });
 
-    const InputElemt = screen.getByRole("title");
-    fireEvent.change(InputElemt, { target: { value: "the title value" } });
+    await act(async () => {
+      const InputElemt = screen.getByRole("title");
+      fireEvent.change(InputElemt, { target: { value: "the title value" } });
 
-    const InputElemt_2 = screen.getByRole("body");
-    fireEvent.change(InputElemt_2, { target: { value: "the body value" } });
+      const InputElemt_2 = screen.getByRole("body");
+      fireEvent.change(InputElemt_2, { target: { value: "the body value" } });
+    });
 
-    const submitButton = screen.getByRole("button", { name: /update/i });
-    fireEvent.click(submitButton);
+    await act(async () => {
+      const submitButton = screen.getByRole("button", { name: /update/i });
+      fireEvent.click(submitButton);
+    });
   });
 
   test("form calcel ", async () => {
@@ -96,7 +97,9 @@ describe("Form Submit ", () => {
       wrapper: AppProviders,
     });
 
-    const submitButton = screen.getByRole("button", { name: /cancel/i });
-    fireEvent.click(submitButton);
+    await act(async () => {
+      const submitButton = screen.getByRole("button", { name: /cancel/i });
+      fireEvent.click(submitButton);
+    });
   });
 });

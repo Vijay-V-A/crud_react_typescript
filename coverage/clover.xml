@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1667542991392" clover="3.2.0">
-  <project timestamp="1667542991393" name="All files">
-    <metrics statements="128" coveredstatements="112" conditionals="42" coveredconditionals="30" methods="60" coveredmethods="50" elements="230" coveredelements="192" complexity="0" loc="128" ncloc="128" packages="6" files="15" classes="15"/>
+<coverage generated="1667664531424" clover="3.2.0">
+  <project timestamp="1667664531424" name="All files">
+    <metrics statements="128" coveredstatements="112" conditionals="42" coveredconditionals="31" methods="60" coveredmethods="51" elements="230" coveredelements="194" complexity="0" loc="128" ncloc="128" packages="6" files="15" classes="15"/>
     <package name="src">
       <metrics statements="6" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
       <file name="App.tsx" path="D:\Examples\TS\crud_react_typescript\src\App.tsx">
@@ -21,21 +21,21 @@
       </file>
     </package>
     <package name="src.Components">
-      <metrics statements="59" coveredstatements="56" conditionals="32" coveredconditionals="24" methods="27" coveredmethods="22"/>
+      <metrics statements="59" coveredstatements="56" conditionals="32" coveredconditionals="25" methods="27" coveredmethods="23"/>
       <file name="AddPost.tsx" path="D:\Examples\TS\crud_react_typescript\src\Components\AddPost.tsx">
-        <metrics statements="23" coveredstatements="21" conditionals="16" coveredconditionals="13" methods="8" coveredmethods="4"/>
+        <metrics statements="23" coveredstatements="21" conditionals="16" coveredconditionals="14" methods="8" coveredmethods="5"/>
         <line num="27" count="2" type="stmt"/>
-        <line num="28" count="16" type="stmt"/>
-        <line num="30" count="15" type="stmt"/>
-        <line num="39" count="15" type="stmt"/>
-        <line num="43" count="15" type="stmt"/>
+        <line num="28" count="17" type="stmt"/>
+        <line num="30" count="17" type="stmt"/>
+        <line num="39" count="17" type="stmt"/>
+        <line num="43" count="17" type="stmt"/>
         <line num="44" count="2" type="stmt"/>
         <line num="45" count="2" type="stmt"/>
         <line num="46" count="0" type="stmt"/>
         <line num="48" count="2" type="cond" truecount="2" falsecount="0"/>
         <line num="49" count="1" type="stmt"/>
         <line num="51" count="2" type="stmt"/>
-        <line num="54" count="15" type="stmt"/>
+        <line num="54" count="17" type="stmt"/>
         <line num="55" count="5" type="cond" truecount="2" falsecount="0"/>
         <line num="56" count="4" type="stmt"/>
         <line num="57" count="4" type="stmt"/>
@@ -43,7 +43,7 @@
         <line num="60" count="1" type="stmt"/>
         <line num="61" count="1" type="stmt"/>
         <line num="62" count="1" type="stmt"/>
-        <line num="66" count="15" type="stmt"/>
+        <line num="66" count="17" type="stmt"/>
         <line num="71" count="0" type="stmt"/>
         <line num="167" count="1" type="stmt"/>
         <line num="168" count="1" type="stmt"/>
