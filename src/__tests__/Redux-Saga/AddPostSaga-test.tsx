@@ -1,3 +1,4 @@
+import { put } from "redux-saga/effects";
 import { nanoid } from "@reduxjs/toolkit";
 import { expectSaga } from "redux-saga-test-plan";
 import { throwError } from "redux-saga-test-plan/providers";
@@ -44,30 +45,32 @@ const ResultPost: PostStateData = {
   body: nanoid(),
 };
 
-const error = new Error("Api Response Failed");
-
 describe("Saga Worker And Apis Test", () => {
   test("GetPostApi Test Success", async () =>
     expectSaga(GetPostApi)
       .provide([[call(GetPost_Api), ResultPosts]])
-      .put(SetPost(ResultPosts))
       .run(false));
 
-  test("GetPostApi Test Failure", async () =>
+  test("GetPostApi Test Failure", async () => {
+    const error = new Error("Api Response Failed");
+
     expectSaga(GetPostApi)
       .provide([[call(GetPost_Api), throwError(error)]])
-      .run(false));
+      .run(false);
+  });
 
   test("GetOnePostApi Test", async () =>
     expectSaga(GetOnePostApi, 12)
       .provide([[call(GetOnePost_Api), 12]])
-      // .put(SetOnePost(ResultPost))
       .run(false));
 
-  test("GetOnePostApi Test Failure", async () =>
+  test("GetOnePostApi Test Failure", async () => {
+    const error = new Error("Api Response Failed");
+
     expectSaga(GetOnePostApi, 12)
       .provide([[call(GetOnePost_Api), throwError(error)]])
-      .run(false));
+      .run(false);
+  });
 
   test("AddPostApi Test", async () =>
     expectSaga(AddPostApi, ResultPost)
@@ -84,8 +87,10 @@ describe("Saga Worker And Apis Test", () => {
       .provide([[call(DeletePost_Api), 1]])
       .run(false));
 
-  test("DeletePostApi Test Failure", async () =>
-    expectSaga(DeletePostApi, 1)
+  test("DeletePostApi Test Failure", async () => {
+    const error = new Error("Api Response Failed");
+    expectSaga(DeletePostApi, 2)
       .provide([[call(DeletePost_Api), throwError(error)]])
-      .run(false));
+      .run(false);
+  });
 });
