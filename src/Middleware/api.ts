@@ -3,11 +3,12 @@ export const GetPost_Api = async () =>
     res.json()
   );
 
-export const GetOnePost_Api = async (id: number) =>
+export const GetOnePost_Api = async (id: number) => {
+  console.log(id);
   await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`).then((res) =>
     res.json()
   );
-
+};
 export const AddPost_Api = async (data: any) =>
   await fetch("https://jsonplaceholder.typicode.com/posts", {
     method: "POST",

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1667664531424" clover="3.2.0">
-  <project timestamp="1667664531424" name="All files">
-    <metrics statements="128" coveredstatements="112" conditionals="42" coveredconditionals="31" methods="60" coveredmethods="51" elements="230" coveredelements="194" complexity="0" loc="128" ncloc="128" packages="6" files="15" classes="15"/>
+<coverage generated="1667669035211" clover="3.2.0">
+  <project timestamp="1667669035212" name="All files">
+    <metrics statements="129" coveredstatements="116" conditionals="40" coveredconditionals="32" methods="60" coveredmethods="54" elements="229" coveredelements="202" complexity="0" loc="129" ncloc="129" packages="6" files="15" classes="15"/>
     <package name="src">
       <metrics statements="6" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
       <file name="App.tsx" path="D:\Examples\TS\crud_react_typescript\src\App.tsx">
@@ -21,21 +21,21 @@
       </file>
     </package>
     <package name="src.Components">
-      <metrics statements="59" coveredstatements="56" conditionals="32" coveredconditionals="25" methods="27" coveredmethods="23"/>
+      <metrics statements="59" coveredstatements="58" conditionals="30" coveredconditionals="26" methods="27" coveredmethods="26"/>
       <file name="AddPost.tsx" path="D:\Examples\TS\crud_react_typescript\src\Components\AddPost.tsx">
-        <metrics statements="23" coveredstatements="21" conditionals="16" coveredconditionals="14" methods="8" coveredmethods="5"/>
+        <metrics statements="23" coveredstatements="22" conditionals="14" coveredconditionals="12" methods="8" coveredmethods="7"/>
         <line num="27" count="2" type="stmt"/>
-        <line num="28" count="17" type="stmt"/>
-        <line num="30" count="17" type="stmt"/>
-        <line num="39" count="17" type="stmt"/>
-        <line num="43" count="17" type="stmt"/>
+        <line num="28" count="18" type="stmt"/>
+        <line num="30" count="18" type="stmt"/>
+        <line num="39" count="18" type="stmt"/>
+        <line num="43" count="18" type="stmt"/>
         <line num="44" count="2" type="stmt"/>
         <line num="45" count="2" type="stmt"/>
-        <line num="46" count="0" type="stmt"/>
+        <line num="46" count="1" type="stmt"/>
         <line num="48" count="2" type="cond" truecount="2" falsecount="0"/>
         <line num="49" count="1" type="stmt"/>
         <line num="51" count="2" type="stmt"/>
-        <line num="54" count="17" type="stmt"/>
+        <line num="54" count="18" type="stmt"/>
         <line num="55" count="5" type="cond" truecount="2" falsecount="0"/>
         <line num="56" count="4" type="stmt"/>
         <line num="57" count="4" type="stmt"/>
@@ -43,24 +43,24 @@
         <line num="60" count="1" type="stmt"/>
         <line num="61" count="1" type="stmt"/>
         <line num="62" count="1" type="stmt"/>
-        <line num="66" count="17" type="stmt"/>
+        <line num="66" count="18" type="stmt"/>
         <line num="71" count="0" type="stmt"/>
-        <line num="167" count="1" type="stmt"/>
-        <line num="168" count="1" type="stmt"/>
+        <line num="169" count="1" type="stmt"/>
+        <line num="170" count="1" type="stmt"/>
       </file>
       <file name="Header.tsx" path="D:\Examples\TS\crud_react_typescript\src\Components\Header.tsx">
-        <metrics statements="13" coveredstatements="12" conditionals="8" coveredconditionals="4" methods="6" coveredmethods="5"/>
+        <metrics statements="13" coveredstatements="13" conditionals="8" coveredconditionals="7" methods="6" coveredmethods="6"/>
         <line num="5" count="2" type="stmt"/>
-        <line num="6" count="6" type="stmt"/>
-        <line num="8" count="6" type="stmt"/>
-        <line num="10" count="9" type="stmt"/>
-        <line num="12" count="6" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="16" count="6" type="stmt"/>
+        <line num="6" count="7" type="stmt"/>
+        <line num="8" count="7" type="stmt"/>
+        <line num="10" count="10" type="stmt"/>
+        <line num="12" count="7" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="16" count="7" type="stmt"/>
         <line num="17" count="4" type="stmt"/>
         <line num="19" count="4" type="stmt"/>
         <line num="20" count="4" type="stmt"/>
-        <line num="24" count="6" type="stmt"/>
+        <line num="24" count="7" type="stmt"/>
         <line num="53" count="1" type="stmt"/>
         <line num="54" count="1" type="stmt"/>
       </file>
@@ -98,23 +98,24 @@
       </file>
     </package>
     <package name="src.Middleware">
-      <metrics statements="15" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="6"/>
+      <metrics statements="16" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="6"/>
       <file name="api.ts" path="D:\Examples\TS\crud_react_typescript\src\Middleware\api.ts">
-        <metrics statements="14" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="5"/>
+        <metrics statements="15" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="5"/>
         <line num="1" count="6" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
         <line num="6" count="6" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="11" count="6" type="stmt"/>
-        <line num="12" count="2" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="24" count="6" type="stmt"/>
-        <line num="25" count="2" type="stmt"/>
-        <line num="36" count="0" type="stmt"/>
-        <line num="38" count="6" type="stmt"/>
-        <line num="39" count="2" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="25" count="6" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="39" count="6" type="stmt"/>
+        <line num="40" count="3" type="stmt"/>
       </file>
       <file name="index.ts" path="D:\Examples\TS\crud_react_typescript\src\Middleware\index.ts">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -122,7 +123,7 @@
       </file>
     </package>
     <package name="src.Middleware.AddPost">
-      <metrics statements="25" coveredstatements="20" conditionals="4" coveredconditionals="0" methods="10" coveredmethods="10"/>
+      <metrics statements="25" coveredstatements="21" conditionals="4" coveredconditionals="0" methods="10" coveredmethods="10"/>
       <file name="AddPostSagaWatcher.ts" path="D:\Examples\TS\crud_react_typescript\src\Middleware\AddPost\AddPostSagaWatcher.ts">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
         <line num="18" count="5" type="stmt"/>
@@ -132,15 +133,15 @@
         <line num="34" count="5" type="stmt"/>
       </file>
       <file name="AddPostSagaWorker.ts" path="D:\Examples\TS\crud_react_typescript\src\Middleware\AddPost\AddPostSagaWorker.ts">
-        <metrics statements="20" coveredstatements="15" conditionals="4" coveredconditionals="0" methods="5" coveredmethods="5"/>
-        <line num="16" count="2" type="stmt"/>
-        <line num="17" count="2" type="stmt"/>
+        <metrics statements="20" coveredstatements="16" conditionals="4" coveredconditionals="0" methods="5" coveredmethods="5"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
         <line num="18" count="1" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="25" count="2" type="stmt"/>
-        <line num="26" count="2" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
         <line num="27" count="0" type="stmt"/>
-        <line num="29" count="1" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
         <line num="34" count="2" type="stmt"/>
         <line num="35" count="2" type="stmt"/>
         <line num="36" count="0" type="cond" truecount="0" falsecount="2"/>
@@ -149,9 +150,9 @@
         <line num="44" count="2" type="stmt"/>
         <line num="45" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="47" count="1" type="stmt"/>
-        <line num="52" count="2" type="stmt"/>
-        <line num="53" count="2" type="stmt"/>
-        <line num="54" count="1" type="stmt"/>
+        <line num="52" count="3" type="stmt"/>
+        <line num="53" count="3" type="stmt"/>
+        <line num="54" count="2" type="stmt"/>
         <line num="56" count="0" type="stmt"/>
       </file>
     </package>

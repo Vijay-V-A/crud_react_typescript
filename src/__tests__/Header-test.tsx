@@ -4,10 +4,13 @@ import AppProviders from "../AppProviders";
 import Header from "../Components/Header";
 
 describe("Header", () => {
-  test("renders all elements correctly", () => {
+  test("renders all elements correctly", async () => {
     render(<Header />, {
       wrapper: AppProviders,
     });
+
+    await fireEvent.scroll(window, { target: { scrollY: 300 } });
+
     const textElement = screen.getByText(/dashboard/i);
     expect(textElement).toBeInTheDocument();
 

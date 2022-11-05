@@ -48,6 +48,7 @@ jest.doMock("intersection-observer-mock", () => IntersectionObserverStub, {
 window.IntersectionObserver = jest.requireMock("intersection-observer-mock");
 
 describe("Form Submit ", () => {
+  jest.useFakeTimers();
   test("form Submit ", async () => {
     render(<AddPost ModalShow={true} OnePost={onedata} />, {
       wrapper: AppProviders,
@@ -64,6 +65,9 @@ describe("Form Submit ", () => {
     await act(async () => {
       const submitButton = screen.getByRole("button", { name: /submit/i });
       fireEvent.click(submitButton);
+    });
+    await act(async () => {
+      jest.advanceTimersByTime(2000);
     });
   });
 });
